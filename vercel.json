@@ -1,22 +1,16 @@
 {
     "version": 2,
+    "name": "itab",
     "builds": [
         {
-            "src": "src/main.ts",
+            "src": "dist/main.ts",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "src/main.ts",
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE",
-                "PATCH"
-            ]
+            "dest": "dist/main.ts"
         }
     ]
 }
